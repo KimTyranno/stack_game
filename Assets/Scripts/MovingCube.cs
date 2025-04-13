@@ -9,12 +9,15 @@ public class MovingCube : MonoBehaviour
     private CubeSpawner cubeSpawner;
     private MoveAxis moveAxis;
     private PerfectController perfectController;
+    private Material cubeMaterial;
 
     public void Setup(CubeSpawner cubeSpawner, PerfectController perfectController, MoveAxis moveAxis)
     {
         this.cubeSpawner = cubeSpawner;
         this.perfectController = perfectController;
         this.moveAxis = moveAxis;
+
+        cubeMaterial = GetComponent<MeshRenderer>().sharedMaterial;
 
         if (moveAxis == MoveAxis.x) moveDirection = Vector3.left;
         else if (moveAxis == MoveAxis.z) moveDirection = Vector3.back;
@@ -144,7 +147,9 @@ public class MovingCube : MonoBehaviour
         }
 
         // 동일한 색상으로 설정
-        clone.GetComponent<MeshRenderer>().material.color = GetComponent<MeshRenderer>().material.color;
+        // clone.GetComponent<MeshRenderer>().material.color = GetComponent<MeshRenderer>().material.color;
+        clone.GetComponent<MeshRenderer>().material = new Material(cubeMaterial);
+
 
         // 중력을 받아 아래로 떨어지도록 설정
         clone.AddComponent<Rigidbody>();
