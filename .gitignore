@@ -1,0 +1,53 @@
+# Unity 6 .gitignore
+
+# 사용자별 파일 (개인 설정 파일)
+*.swp
+*.suo
+*.user
+*.userprefs
+.idea/
+
+# 윈도우 설치 파일
+Thumbs.db
+Desktop.ini
+
+# VS/Mono에서 자동 생성한 파일들
+.vs/
+.vscode/
+.idea/
+
+# 프로젝트 파일들
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.user
+*.userprefs
+
+# 빌드 결과물
+[Bb]uild/
+[Bb]uilds/
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Ll]ogs/
+
+# 유니티에서 자동 생성한 파일들
+[Dd]ebug/
+[Dd]ebugPublic/
+
+# 유니티 에셋 스토어 도구 폴더 (필요 시 주석 해제)
+# AssetStoreTools/
+
+# 유니티3D 관련 폴더들
+UserSettings/
+
+# JetBrains Rider 관련 파일들
+.idea/
+
+# 윈도우 설치 파일
+Thumbs.db
+Desktop.ini
+
+# 유니티 클라우드 빌드 파일
+*.cloud
